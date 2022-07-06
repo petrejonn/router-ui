@@ -1,12 +1,10 @@
-$primary: #25356a;
-$accent: #e5b909;
-
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
+
 .nav {
-  background-color: $primary;
+  background-color: #25356a;
 }
 
 .nav-desktop {
@@ -17,58 +15,51 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
-  .row {
-    display: flex;
-    justify-content: space-between;
-    padding: 0px 10vw;
-    color: white;
-    font-size: 1.5em;
-    font-weight: 400;
-
-    p {
-      margin: 4px 8px;
-    }
-
-    .logo {
-      width: 7em;
-      padding: 0;
-    }
-
-    .logout {
-      img {
-        width: 1.4em;
-        padding-left: 0px;
-      }
-      a {
-        vertical-align: top;
-        margin: 0px 4px;
-        text-decoration: none;
-        color: white;
-      }
-    }
-  }
-
-  .nav__links {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    li {
-      list-style: none;
-      color: white;
-      font-size: 1.6em;
-      font-weight: 400;
-      margin: 0px 6px;
-      padding: 8px;
-
-      a {
-        text-decoration: none;
-        color: white;
-      }
-    }
-    .active {
-      border-bottom: 3px solid $accent;
-    }
-  }
+}
+.nav-desktop .row {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 10vw;
+  color: white;
+  font-size: 1.5em;
+  font-weight: 400;
+}
+.nav-desktop .row p {
+  margin: 4px 8px;
+}
+.nav-desktop .row .logo {
+  width: 7em;
+  padding: 0;
+}
+.nav-desktop .row .logout img {
+  width: 1.4em;
+  padding-left: 0px;
+}
+.nav-desktop .row .logout a {
+  vertical-align: top;
+  margin: 0px 4px;
+  text-decoration: none;
+  color: white;
+}
+.nav-desktop .nav__links {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.nav-desktop .nav__links li {
+  list-style: none;
+  color: white;
+  font-size: 1.6em;
+  font-weight: 400;
+  margin: 0px 6px;
+  padding: 8px;
+}
+.nav-desktop .nav__links li a {
+  text-decoration: none;
+  color: white;
+}
+.nav-desktop .nav__links .active {
+  border-bottom: 3px solid #e5b909;
 }
 
 /* 
@@ -254,4 +245,4 @@ input[type="radio"] {
 .progress {
   background: #e8e8e8;
   border-radius: 16px;
-} */
+} *//*# sourceMappingURL=style.css.map */

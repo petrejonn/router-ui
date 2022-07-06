@@ -6,37 +6,92 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="<%=media%>/style.css" />
+    <link rel="stylesheet" href="../style.css" />
 
     <title>Wicrypt</title>
   </head>
 
   <body>
     <header>
-      <nav class="nav">
-        <div class="nav-desktop__items">
-          <div>
-            <img
-              src="<%=media%>/assets/img/logo.svg"
-              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
-              alt=""
-              style="width: 85px; padding: 0"
-            />
-            <div>Setup Your Wicrypt Hotspot Hub</div>
-          </div>
-          <div>
-            <img
-              src="<%=media%>/assets/img/logout-icon.svg"
-              style="width: 16px; padding-left: 0px"
-            />
-            <a
-              href="/cgi-bin/luci/admin/logout"
-              style="margin-right: 1vw; padding: 0"
-            >
-              Logout</a
-            >
+      <nav class="nav nav-desktop">
+        <div>
+          <div class="row">
+            <div>
+              <img src="../assets/img/logo.svg" alt="logo" class="logo" />
+              <p>Setup Your Wicrypt Hotspot Hub</p>
+            </div>
+            <div class="logout">
+              <img src="../assets/img/logout-icon.svg" />
+              <a href="/cgi-bin/luci/admin/logout"> Logout</a>
+            </div>
           </div>
         </div>
+
+        <ul class="nav__links">
+          <li class="active">
+            <a href="/cgi-bin/luci/admin/index">Overview</a>
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/device-registration"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Register Hotspot Hub</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/quicksetup"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Quick Setup</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/business"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Business</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/system-settings"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >System</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/vpn-settings"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >VPN</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/status/overview"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Advanced Settings</a
+            >
+          </li>
+        </ul>
         <!-- <div class="col mt-5 navbar-brand text-white">
           <div class="row">
             <img
@@ -191,81 +246,6 @@
             </div>
           </div>
         </div> -->
-
-      <div class="d-none d-sm-block">
-        <ul class="nav nav-tabs d-flex justify-content-center" role="tablist">
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link fw-bold active"
-              href="/cgi-bin/luci/admin/index"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >Overview</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link fw-bold"
-              href="/cgi-bin/luci/admin/device-registration"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >Register Hotspot Hub</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link fw-bold"
-              href="/cgi-bin/luci/admin/quicksetup"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >Quick Setup</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link fw-bold"
-              href="/cgi-bin/luci/admin/business"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >Business</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link fw-bold"
-              href="/cgi-bin/luci/admin/system-settings"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >System</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link fw-bold"
-              href="/cgi-bin/luci/admin/vpn-settings"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >VPN</a
-            >
-          </li>
-          <li class="nav-item" role="presentation">
-            <a
-              class="nav-link fw-bold"
-              href="/cgi-bin/luci/admin/status/overview"
-              role="tab"
-              aria-controls="contact"
-              aria-selected="false"
-              >Advanced Settings</a
-            >
-          </li>
-        </ul>
-      </div>
     </header>
 
     <!-- 
