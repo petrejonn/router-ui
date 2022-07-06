@@ -1,0 +1,518 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="<%=media%>/style.css" />
+
+    <title>Wicrypt</title>
+  </head>
+
+  <body>
+    <header>
+      <nav class="nav">
+        <div class="nav-desktop__items">
+          <div>
+            <img
+              src="<%=media%>/assets/img/logo.svg"
+              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+              alt=""
+              style="width: 85px; padding: 0"
+            />
+            <div>Setup Your Wicrypt Hotspot Hub</div>
+          </div>
+          <div>
+            <img
+              src="<%=media%>/assets/img/logout-icon.svg"
+              style="width: 16px; padding-left: 0px"
+            />
+            <a
+              href="/cgi-bin/luci/admin/logout"
+              style="margin-right: 1vw; padding: 0"
+            >
+              Logout</a
+            >
+          </div>
+        </div>
+        <!-- <div class="col mt-5 navbar-brand text-white">
+          <div class="row">
+            <img
+              src="<%=media%>/assets/img/logo.svg"
+              class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+              alt=""
+              style="width: 85px; padding: 0"
+            />
+          </div>
+        </div> -->
+
+        <!-- <button
+          class="d-block d-sm-none btn"
+          type="button"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#mobileMenu"
+          aria-controls="mobileMenu"
+        >
+          <img
+            src="<%=media%>/assets/img/hamburger-icon.svg"
+            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+            alt=""
+            style="width: 25px; height: 24px; padding-left: 0px"
+          />
+        </button> -->
+      </nav>
+
+      <!-- <div
+          class="offcanvas offcanvas-start"
+          tabindex="-1"
+          id="mobileMenu"
+          aria-labelledby="menuLabel"
+          style="background: #25356a"
+        >
+          <div class="offcanvas-header">
+            <div class="col mt-5 navbar-brand text-white" id="menuLabel">
+              <div class="row">
+                <img
+                  src="<%=media%>/assets/img/logo.svg"
+                  class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                  alt=""
+                  style="width: 85px; padding: 0"
+                />
+              </div>
+              <div class="row">Setup Your Wicrypt Hotspot Hub</div>
+            </div>
+
+            <button
+              type="button"
+              class="btn text-reset mt-4"
+              data-bs-dismiss="offcanvas"
+              aria-label="Close"
+            >
+              <img
+                src="<%=media%>/assets/img/cancel-icon.svg"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                alt=""
+                style="width: 16px; height: 16px; padding-left: 0px"
+              />
+            </button>
+          </div>
+          <div class="offcanvas-body">
+            <div class="d-flex justify-content-start">
+              <ul class="nav nav-tabs-mobile flex-column" role="tablist">
+                <li class="nav-item my-2" role="presentation">
+                  <a
+                    class="nav-link fw-bold active"
+                    href="/cgi-bin/luci/admin/index"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >Overview</a
+                  >
+                </li>
+                <li class="nav-item my-2" role="presentation">
+                  <a
+                    class="nav-link fw-bold"
+                    href="/cgi-bin/luci/admin/device-registration"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >Register Hotspot Hub</a
+                  >
+                </li>
+                <li class="nav-item my-2" role="presentation">
+                  <a
+                    class="nav-link fw-bold"
+                    href="/cgi-bin/luci/admin/quicksetup"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >Quick Setup</a
+                  >
+                </li>
+                <li class="nav-item my-2" role="presentation">
+                  <a
+                    class="nav-link fw-bold"
+                    href="/cgi-bin/luci/admin/business"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >Business</a
+                  >
+                </li>
+                <li class="nav-item my-2" role="presentation">
+                  <a
+                    class="nav-link fw-bold"
+                    href="/cgi-bin/luci/admin/system-settings"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >System</a
+                  >
+                </li>
+                <li class="nav-item my-2" role="presentation">
+                  <a
+                    class="nav-link fw-bold"
+                    href="/cgi-bin/luci/admin/vpn-settings"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >VPN</a
+                  >
+                </li>
+                <li class="nav-item my-2" role="presentation">
+                  <a
+                    class="nav-link fw-bold"
+                    href="/cgi-bin/luci/admin/status/overview"
+                    role="tab"
+                    aria-controls="contact"
+                    aria-selected="false"
+                    >Advanced Settings</a
+                  >
+                </li>
+              </ul>
+            </div>
+            <hr style="border: 1px solid #495a93" />
+            <div class="col mt-5">
+              <img
+                src="<%=media%>/assets/img/logout-icon.svg"
+                class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                alt=""
+                style="width: 16px; padding-left: 0px"
+              />
+              <a
+                class="btn text-white"
+                href="/cgi-bin/luci/admin/logout"
+                style="margin-right: 1vw; padding: 0"
+              >
+                Logout</a
+              >
+            </div>
+          </div>
+        </div> -->
+
+      <div class="d-none d-sm-block">
+        <ul class="nav nav-tabs d-flex justify-content-center" role="tablist">
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold active"
+              href="/cgi-bin/luci/admin/index"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Overview</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/device-registration"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Register Hotspot Hub</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/quicksetup"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Quick Setup</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/business"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Business</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/system-settings"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >System</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/vpn-settings"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >VPN</a
+            >
+          </li>
+          <li class="nav-item" role="presentation">
+            <a
+              class="nav-link fw-bold"
+              href="/cgi-bin/luci/admin/status/overview"
+              role="tab"
+              aria-controls="contact"
+              aria-selected="false"
+              >Advanced Settings</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <!-- 
+        ************************* OVERVIEW TAB**************************
+        <section>
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-md-1">
+
+                    </div>
+                    <div class="col-md-10">
+                        <div class="card content-container">
+                            <div class="card-body pt-5">
+                                <div class="row mb-3 ">
+                                    <div class="col-md-6 ">
+                                        <img src="<%=media%>/assets/img/devices-icon.svg"
+                                            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                            alt="" style="width: 33.6px; padding: 0;">
+                                        <div class="fw-bold fs-3 mt-3">
+                                            Connected Devices <span
+                                                class="connected-devices-count">[<%=table.getn(getDHCPLeases.dhcp_leases)%>]</span>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col title-1">
+                                                Host Name
+                                            </div>
+                                            <div class="col title-1">
+                                                MAC
+                                            </div>
+                                        </div>
+                                        <hr>
+                                        <% for k,v in pairs(getDHCPLeases.dhcp_leases) do %>
+                                        <div class="row">
+                                            <div class="col">
+                                                <%=v.hostname%>
+                                            </div>
+                                            <div class="col">
+                                                <%=v.macaddr%>
+                                            </div>
+                                        </div>
+                                        <% end %>
+
+                                        <div class="row mt-3">
+                                            <div class="nav col-sm-6">
+                                                <a class="link" href="/cgi-bin/luci/admin/connecteddevices">View All
+                                                    Devices</a>
+                                                <img src="<%=media%>/assets/img/foward-icon.svg"
+                                                    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                                    alt="" style="width: 12.41px; margin-left: 7px; padding: 0;">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-1"></div>
+                                   
+                                </div>
+                                <hr>
+                                <div class="row d-flex justify-content-between">
+                                    <div class="col-md-5 mt-5">
+                                        <img src="<%=media%>/assets/img/info-icon.svg"
+                                            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                            alt="" style="width: 33.6px; padding: 0;">
+                                        <div class="fw-bold fs-3 mt-3">
+                                            System Info
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col title-1">
+                                                Host Name
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=boardinfo.hostname or "Wicrypt"%>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                Model
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=boardinfo.model%>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                Architecture
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=boardinfo.system%>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                Kernel Version
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=boardinfo.kernel%>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                Up Time
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=hr%>hrs<%=min%>mins
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="col-md-5 mt-5">
+                                        <img src="<%=media%>/assets/img/info-icon.svg"
+                                            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                            alt="" style="width: 33.6px; padding: 0;">
+                                        <div class="fw-bold fs-3 mt-3">
+                                            WiFi Info
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col title-1">
+                                                Type
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=iwinfoattributes.radio0.iwinfo.hardware.name%>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                Channel
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=iwinfoattributes.radio0.config.channel%>
+                                                (<%=iwinfoattributes.radio0.iwinfo.frequency/1000%> GHz)
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                Bitrate
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=bitrate%>
+                                                bit/s
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                SSID
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=iwinfoattributes.radio0.interfaces[1].iwinfo.ssid%>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                BSSID
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=iwinfoattributes.radio0.interfaces[1].iwinfo.bssid%>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col title-1">
+                                                Encryption
+                                            </div>
+                                            <div class="col content-1">
+                                                <%=output%>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-md-10">
+                                        <img src="<%=media%>/assets/img/info-icon.svg"
+                                            class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                                            alt="" style="width: 33.6px; padding: 0;">
+                                        <div class="fw-bold fs-3 mt-3">
+                                            Memory Info
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-sm-2 title-1">
+                                                Total Available
+                                            </div>
+                                            <div class="col-sm-10 content-1">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                        style="width: <%=availablememory/totalmemory *100%>%"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>(<%=availablepercentage%>%)</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-2 title-1">
+                                                Used
+                                            </div>
+                                            <div class="col-sm-10 content-1">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                        style="width: <%=usedmemory/totalmemory * 100%>%"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>(<%=usedpercentage%>%)</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-2 title-1">
+                                                Buffered
+                                            </div>
+                                            <div class="col-sm-10 content-1">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                        style="width: <%=bufferedmemory/totalmemory * 100%>%"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>(<%=bufferedpercentage%>%)</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-2">
+                                            <div class="col-sm-2 title-1">
+                                                Cache
+                                            </div>
+                                            <div class="col-sm-10 content-1">
+                                                <div class="progress">
+                                                    <div class="progress-bar" role="progressbar"
+                                                        style="width: <%=cachedmemory/totalmemory * 100%>%"
+                                                        aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><span>(<%=cachedpercentage%>%)</span></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section> -->
+
+    <footer>
+      <div class="container-md">
+        <div class="row pt-5 pb-5">
+          <div class="col-sm-4 fw-light" style="color: #747474">
+            <p>Copyright Wicrypt All Right Reserved © 2021</p>
+          </div>
+          <div class="col-sm-4 fw-light" style="color: #b9b6b6">
+            <span>Powered By Wicrypt OS</span>
+          </div>
+          <div class="col-sm-4 fw-light" style="color: #747474">
+            <p>Firmware Version 1.0.0</p>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
