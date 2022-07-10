@@ -1,9 +1,33 @@
 $primary: #25356a;
 $accent: #e5b909;
+$gray-0: #b9b6b6;
+$gray-1: #7b7676;
+$gray-2: #4b4b4b;
+$progress-bar-bg: #e8e8e8;
+$progress-bg: #495a93;
 
 body {
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex: 1;
+}
+hr {
+  border-color: white;
+}
+footer {
+  color: $gray-1;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 10vw;
+
+  p:nth-child(2) {
+    color: $gray-0;
+  }
 }
 .nav {
   background-color: $primary;
@@ -22,7 +46,7 @@ body {
     justify-content: space-between;
     padding: 0px 10vw;
     color: white;
-    font-size: 1.5em;
+    font-size: 1em;
     font-weight: 400;
 
     p {
@@ -55,7 +79,7 @@ body {
     li {
       list-style: none;
       color: white;
-      font-size: 1.6em;
+      font-size: 1em;
       font-weight: 400;
       margin: 0px 6px;
       padding: 8px;
@@ -69,6 +93,140 @@ body {
       border-bottom: 3px solid $accent;
     }
   }
+}
+
+.card {
+  border: 0.96px solid #d8d8d8;
+  box-sizing: border-box;
+  box-shadow: 0px 2px 5px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 4.79592px;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  padding: 23px;
+}
+
+.overview__card {
+  margin: 0 10vw;
+  min-height: 60vh;
+}
+
+.connected-devices {
+  padding-right: 16px;
+  h3 {
+    margin: 8px 0;
+  }
+  h5 {
+    color: $gray-1;
+  }
+  .heading {
+    display: flex;
+    width: 100%;
+    h5 {
+      flex: 1;
+    }
+  }
+  .row {
+    display: flex;
+    width: 100%;
+    p {
+      flex: 1;
+    }
+  }
+}
+
+.system-info {
+  padding-right: 16px;
+  h3 {
+    margin: 8px 0;
+  }
+  h5 {
+    color: $gray-1;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    p {
+      flex: 1;
+    }
+    h5 {
+      flex: 1;
+    }
+  }
+}
+
+.wireless-info {
+  padding-right: 16px;
+  h3 {
+    margin: 8px 0;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    p {
+      flex: 1;
+    }
+    h5 {
+      flex: 1;
+    }
+  }
+}
+
+.memory-info {
+  padding-right: 16px;
+  h3 {
+    margin: 8px 0;
+  }
+
+  .row {
+    display: flex;
+    width: 100%;
+    p {
+      flex: 3;
+    }
+    div {
+      flex: 1;
+
+      .progress-bar {
+        color: rgb(149, 146, 146);
+        width: 100%;
+        border-radius: 16px;
+        background-color: $progress-bar-bg;
+        position: relative;
+
+        .progress {
+          border-radius: 16px;
+          background-color: $progress-bg;
+          position: absolute;
+        }
+      }
+    }
+  }
+}
+
+.flex {
+  display: flex;
+}
+.justify_space-between {
+  justify-content: space-between;
+}
+
+.w-1_2 {
+  width: 50%;
+}
+.w-1_3 {
+  width: 33.33%;
+}
+.w-2_3 {
+  width: 66.66%;
+}
+
+.text-gray-1 {
+  color: $gray-1;
+}
+.text-gray-2 {
+  color: $gray-2;
 }
 
 /* 
