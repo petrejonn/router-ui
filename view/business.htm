@@ -95,21 +95,61 @@
       </nav>
     </header>
     <main>
-      <div class="card registration__card">
-        <h2>Wicrypt Hotspot Hub Registeration</h2>
-        <p>Connect your router to your wicrypt account to enjoy our services</p>
+      <div class="card business__card">
         <form>
-          <div class="row">
-            <label for="email">Email</label>
-            <input type="email" name="email" id="email" />
+          <div class="flex">
+            <div class="w-2_3">
+              <h2>Welcome to the Smarter Device Switch</h2>
+              <p>
+                This tab allows you to switch perormance of your smart network
+                router either for personal mode or buisness mode
+              </p>
+            </div>
+            <div class="flex w-1_3 justify_space-between">
+              <div>
+                <input
+                  type="radio"
+                  value="Enable"
+                  id="enable"
+                  name="business-mode"
+                />Enable<label for="enable"></label>
+              </div>
+              <div>
+                <input
+                  type="radio"
+                  value="Disable"
+                  id="disable"
+                  name="business-mode"
+                />Disable<label for="disable"></label>
+              </div>
+            </div>
           </div>
-          <div class="row">
-            <label for="password">Password</label>
-            <input type="password" name="password" id="password" />
+          <div>
+            <h2>Personal :</h2>
+            <p>
+              This is for general use case that require no voucher code, no data
+              limits on connected devices. it is preferred for personal and home
+              use. Benefits of Personal Mode Easy Device Connection as this
+              doesnt require voucher codes for login for everyday personal use
+              as users can track their data cosumptions on multiple devices yet
+              with no data limits, splash screen page is disabled as user need
+              not to login
+            </p>
           </div>
-          <div class="submit">
-            <input type="submit" value="Register" />
+          <div>
+            <h2>Buisness:</h2>
+            <p>
+              This option is for buisness use case where device admin makes
+              profit from connected devices by resellling data using voucher
+              codes and data limits. This prefered for buisness use, official
+              use and public domain use with restrictions to voucher access.
+              Benefits of Buisness Mode allows users to earn based on connected
+              device splash screen page is enable to allow only users with
+              voucher codes login this is a security feature allocate different
+              data limits to voucher codes
+            </p>
           </div>
+          <input type="submit" />
         </form>
       </div>
     </main>

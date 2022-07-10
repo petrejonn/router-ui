@@ -4,7 +4,11 @@ $gray-0: #b9b6b6;
 $gray-1: #7b7676;
 $gray-2: #4b4b4b;
 $progress-bar-bg: #e8e8e8;
-$progress-bg: #495a93;
+$primary-2: #495a93;
+
+:focus-visible {
+  outline: none;
+}
 
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -28,6 +32,35 @@ footer {
   p:nth-child(2) {
     color: $gray-0;
   }
+}
+input {
+  box-sizing: border-box;
+  border: 1px solid $gray-0;
+  border-radius: 2px;
+  height: 3.2em;
+  width: 100%;
+}
+input[type="checkbox"] {
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin-top: 0;
+  border-radius: 2px !important;
+}
+
+input[type="radio"] {
+  box-sizing: border-box;
+  vertical-align: middle;
+  margin-top: 0;
+  width: 21px;
+  height: 21px;
+}
+input[type="radio"]:checked {
+  border: 2px solid #495a93;
+}
+input[type="submit"] {
+  background-color: $primary-2;
+  color: white;
 }
 .nav {
   background-color: $primary;
@@ -197,7 +230,7 @@ footer {
 
         .progress {
           border-radius: 16px;
-          background-color: $progress-bg;
+          background-color: $primary-2;
           position: absolute;
         }
       }
@@ -205,11 +238,57 @@ footer {
   }
 }
 
+.registration__card {
+  margin: 0 20vw;
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  p {
+    color: $gray-1;
+  }
+
+  form {
+    width: 100%;
+    .row {
+      display: flex;
+      margin: 16px;
+      align-items: center;
+    }
+    label {
+      width: 20%;
+      display: block;
+    }
+    input {
+      width: 40%;
+    }
+    .submit {
+      margin-left: 16px;
+      input {
+        margin-left: 20%;
+        width: 20%;
+      }
+    }
+  }
+}
+.business__card {
+  margin: 0 20vw;
+  form {
+    min-height: 60vh;
+    justify-content: space-around;
+    flex-direction: column;
+    display: flex;
+  }
+}
 .flex {
   display: flex;
 }
 .justify_space-between {
   justify-content: space-between;
+}
+
+.justify_center {
+  justify-content: center;
 }
 
 .w-1_2 {
